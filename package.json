@@ -1,0 +1,86 @@
+{
+  "name": "deathwing",
+  "version": "1.0.0",
+  "description": "to define",
+  "main": "karma.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --host 0.0.0.0",
+    "build": "BABEL_ENV=production webpack",
+    "test:watch": "karma start karma.config.js --auto-watch --no-single-run",
+    "test": "karma start karma.config.js --no-auto-watch --single-run",
+    "eslint": "eslint {app,tests}/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baldore/redux-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "webpack",
+    "webapp"
+  ],
+  "author": "baldore <acornssn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baldore/redux-boilerplate/issues"
+  },
+  "homepage": "https://github.com/baldore/redux-boilerplate#readme",
+  "devDependencies": {
+    "babel-core": "6.4.0",
+    "babel-eslint": "4.1.6",
+    "babel-loader": "6.2.1",
+    "babel-plugin-react-transform": "2.0.0",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "babel-preset-stage-0": "6.3.13",
+    "clean-webpack-plugin": "0.1.6",
+    "css-loader": "0.23.1",
+    "eslint": "1.10.3",
+    "eslint-config-airbnb": "4.0.0",
+    "eslint-loader": "1.2.0",
+    "eslint-plugin-react": "3.15.0",
+    "extract-text-webpack-plugin": "1.0.1",
+    "isparta-instrumenter-loader": "1.0.0",
+    "json-loader": "0.5.4",
+    "karma": "0.13.19",
+    "karma-coverage": "0.5.3",
+    "karma-mocha": "0.2.1",
+    "karma-phantomjs-launcher": "0.2.3",
+    "karma-sourcemap-loader": "0.3.7",
+    "karma-spec-reporter": "0.0.23",
+    "karma-webpack": "1.7.0",
+    "mocha": "2.3.4",
+    "node-sass": "3.4.2",
+    "null-loader": "0.1.1",
+    "phantomjs": "1.9.19",
+    "phantomjs-polyfill": "0.0.1",
+    "postcss-loader": "0.8.0",
+    "react-addons-test-utils": "0.14.6",
+    "react-css-modules": "3.6.8",
+    "react-hot-loader": "1.3.0",
+    "react-transform-hmr": "1.0.1",
+    "redux-logger": "2.3.2",
+    "sass-loader": "3.1.2",
+    "style-loader": "0.13.0",
+    "wallaby-webpack": "0.0.11",
+    "webpack": "1.12.11",
+    "webpack-dev-server": "1.14.1",
+    "webpack-merge": "0.7.3"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.3.14",
+    "normalize.css": "3.0.3",
+    "react": "0.14.6",
+    "react-dom": "0.14.6",
+    "react-redux": "4.0.6",
+    "react-router": "2.0.0-rc5",
+    "redux": "3.0.5",
+    "redux-router": "0.1.0",
+    "redux-simple-router": "2.0.3",
+    "redux-thunk": "1.0.3"
+  }
+}

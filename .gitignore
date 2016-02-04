@@ -1,3 +1,11 @@
+# IntelliJ
+.idea
+
+# Project Specific Build
+assets/main.js
+assets/main.css
+build
+
 # Logs
 logs
 *.log
