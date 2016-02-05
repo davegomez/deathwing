@@ -7,11 +7,12 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0",
+    "start": "npm run test:watch & webpack-dev-server --host 0.0.0.0",
     "build": "BABEL_ENV=production webpack",
     "test:watch": "karma start karma.config.js --auto-watch --no-single-run",
     "test": "karma start karma.config.js --no-auto-watch --single-run",
-    "eslint": "eslint {app,tests}/**/*.js"
+    "eslint": "eslint {app,tests}/**/*.js",
+    "clean": "rm -rf assets build"
   },
   "repository": {
     "type": "git",

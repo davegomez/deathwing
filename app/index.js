@@ -6,7 +6,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import { syncHistory, routeReducer } from 'redux-simple-router';
 import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
-import Root from './components/Root';
+import Root from './containers/Root/Root';
 import reducers from './reducers/reducers';
 
 const reduxRouterMiddleware = syncHistory(browserHistory);
