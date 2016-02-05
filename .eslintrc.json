@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "jasmine": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "ecmaFeatures": {
+    "experimentalObjectRestSpread": true
+  },
+  "rules": {
+    "comma-dangle": [2, "never"],
+    "space-before-function-paren": [2, "never"],
+
+    "react/jsx-closing-bracket-location": 0,
+    "react/jsx-indent-props": [0, 2]
+  }
+}
