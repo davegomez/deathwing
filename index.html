@@ -5,11 +5,43 @@
   <title>Redux Boilerplate</title>
 
   <meta name="viewport" content="width=device-width">
+  <meta name="google-signin-client_id" content="855003494190-u6jlh0v71svp77q5g6uqgp34ochagkac.apps.googleusercontent.com">
 
   <link rel="stylesheet" href="/assets/main.css">
 </head>
 <body>
 
+<h1>Login!</h1>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<button class="js-logout">Log Out!</button>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>
+
+  function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail());
+  }
+
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    var profile = gapi.auth2.getAuthInstance().currentUser.get().getBasicProfile()
+    console.log('Why??? Why are you leaving now???', profile.getName());
+    console.log('profile before sign in', gapi.auth2);
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+      console.log('Why??? Why are you leaving now???', gapi.auth2.getAuthInstance().currentUser.get().isSignedIn());
+    });
+  }
+
+  (function() {
+    document.querySelector('.js-logout').addEventListener('click', signOut, false);
+  })();
+
+</script>
 <script src="/assets/main.js"></script>
 
 </body>
