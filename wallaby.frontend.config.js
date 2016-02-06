@@ -2,10 +2,26 @@ var babel = require('babel-core');
 var webpack = require('webpack');
 var wallabyWebpack = require('wallaby-webpack');
 
+process.env.BABEL_ENV = 'test';
+
 var webpackPostprocessor = wallabyWebpack({
+  resolve: {
+    alias: {
+      'sinon': 'sinon/pkg/sinon'
+    }
+  },
+  externals: {
+    'jsdom': 'window',
+    'cheerio': 'window',
+    'react/lib/ExecutionEnvironment': true
+  },
   module: {
+    noParse: [
+      /node_modules\/sinon\//,
+    ],
     loaders: [
-      { test: /\.scss$/, loader: 'null' }
+      { test: /\.scss$/, loader: 'null' },
+      { test: /\.json$/, loader: 'json' }
     ]
   },
   plugins: [
@@ -45,4 +61,3 @@ module.exports = function(wallaby) {
     }
   };
 };
-

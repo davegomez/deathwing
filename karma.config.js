@@ -26,12 +26,29 @@ module.exports = function(config) {
       ]
     },
     webpack: {
+      resolve: {
+        alias: {
+          'sinon': 'sinon/pkg/sinon'
+        }
+      },
+      externals: {
+        'jsdom': 'window',
+        'cheerio': 'window',
+        'react/lib/ExecutionEnvironment': true
+      },
       module: {
+        noParse: [
+          /node_modules\/sinon\//
+        ],
         preLoaders: [
           {
             test: /(\.jsx)|(\.js)$/,
             exclude: /(tests|node_modules|bower_components)\//,
             loader: 'isparta-instrumenter-loader'
+          },
+          {
+            test: /\.json$/,
+            loader: 'json'
           }
         ],
         loaders: [
