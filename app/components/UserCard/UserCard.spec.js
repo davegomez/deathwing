@@ -5,6 +5,6 @@ import { shallow } from 'enzyme';
 
 describe('UserCard component', () => {
   it('should be tested with Enzyme', () => {
-    const wrapper = shallow(<UserCard />);
+    const wrapper = shallow(<UserCard userName="foo" userEmail="bar" />);
   });
 });
