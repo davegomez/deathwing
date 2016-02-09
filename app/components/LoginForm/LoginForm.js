@@ -43,7 +43,7 @@ export default class LoginForm extends React.Component {
           <div className={css.imageContainer}>
             <img src="/assets/logo.svg" alt="Deathwing"/>
           </div>
-          <button onClick={this.handleLogin}>
+          <button className={css.signInButton} onClick={this.handleLogin}>
             <img src="/assets/google-sign-in.png" alt="Google Sign In"/>
           </button>
         </div>
