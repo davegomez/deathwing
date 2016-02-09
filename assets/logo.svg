@@ -1,0 +1,27 @@
+<svg width="102px" height="125px" viewBox="0 0 102 125" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#263238" offset="0%"></stop>
+            <stop stop-color="#90A4AE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#263238" offset="0%"></stop>
+            <stop stop-color="#455A64" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#263238" offset="0%"></stop>
+            <stop stop-color="#607D8B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Login" transform="translate(-589.000000, -279.000000)">
+            <g id="logo" transform="translate(580.000000, 279.000000)">
+                <g id="Group" transform="translate(9.000000, 0.000000)">
+                    <path d="M51.5825243,7.10542736e-15 L0.284387674,56.2252541 L18.5826817,56.2252541 L51.5825243,124.591518 L51.5825243,7.10542736e-15 L51.5825243,7.10542736e-15 Z" id="teal-300-to-900" fill="url(#linearGradient-1)"></path>
+                    <path d="M51.582524,7.10542736e-15 L51.5825243,124.697317 L83.388209,56.2252541 L101.686501,56.1082117 L51.582524,7.10542736e-15 L51.582524,7.10542736e-15 Z" id="teal-700-to-900" fill="url(#linearGradient-2)"></path>
+                    <path d="M51.5825243,0 L14.3009709,47.7669903 L32.9417485,47.7669903 L51.5825243,101.359223 L69.0582533,47.7669903 L87.6990291,47.7669903 L51.5825243,0 Z" id="teal-500-to-900" fill="url(#linearGradient-3)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

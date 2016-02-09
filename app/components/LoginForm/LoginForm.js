@@ -38,14 +38,16 @@ export default class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className={css.container}>
+      <section className={css.container}>
         <div className={css.content}>
           <div className={css.imageContainer}>
-            <img src="/assets/logo.jpg" alt=""/>
+            <img src="/assets/logo.svg" alt="Deathwing"/>
           </div>
-          <button onClick={this.handleLogin}>Sign in with Google</button>
+          <button onClick={this.handleLogin}>
+            <img src="/assets/google-sign-in.png" alt="Google Sign In"/>
+          </button>
         </div>
-      </div>
+      </section>
     );
   }
 }

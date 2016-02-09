@@ -1,9 +1,8 @@
 .container {
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  width: 100vw;
 }
 
 .content {
@@ -11,8 +10,9 @@
 }
 
 .imageContainer {
+  margin-bottom: 48px;
+  margin-top: 280px;
   text-align: center;
-  margin-bottom: 10px;
 
   img {
     display: inline-block;
