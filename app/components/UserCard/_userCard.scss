@@ -1,0 +1,53 @@
+.card {
+  background: #455A64;
+  border-radius: 4px;
+  top: 0;
+  color: #ffffff;
+  display: block;
+  left: calc(100% + 16px);
+  opacity: 0;
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-10px);
+  transition: all .25s ease-out;
+
+  &:before {
+    bottom: 0;
+    content: " ";
+    display: block;
+    height: 100%;
+    left: -20px;
+    position: absolute;
+    width: 20px;
+  }
+
+  &:after {
+    border-top: solid transparent 10px;
+    border-bottom: solid transparent 10px;
+    border-right: solid #455A64 10px;
+    content: " ";
+    height: 0;
+    left: -10px;
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 0;
+  }
+}
+
+.avatar:hover .card {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
+
+.userName {
+  font-size: 14px;
+}
+
+.userEmail {
+  font-size: 12px;
+  font-style: italic;
+  font-weigth: 300;
+
+}
