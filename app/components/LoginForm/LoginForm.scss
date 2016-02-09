@@ -1,0 +1,21 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  align-self: center;
+}
+
+.imageContainer {
+  text-align: center;
+  margin-bottom: 10px;
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './LoginForm.scss';
 
 export default class LoginForm extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class LoginForm extends React.Component {
   }
 
   handleLogout() {
-     // TODO: Create an action for this!
+    // TODO: Create an action for this!
     // Read this: https://developers.google.com/identity/sign-in/web/reference#gapiauth2initwzxhzdk20paramswzxhzdk21
     const auth = gapi.auth2.getAuthInstance();
     const user = auth.currentUser.get();
@@ -37,9 +38,13 @@ export default class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.handleLogin}>Sign in with Google</button>
-        <button onClick={this.handleLogout}>Log out!</button>
+      <div className={css.container}>
+        <div className={css.content}>
+          <div className={css.imageContainer}>
+            <img src="/assets/logo.jpg" alt=""/>
+          </div>
+          <button onClick={this.handleLogin}>Sign in with Google</button>
+        </div>
       </div>
     );
   }
