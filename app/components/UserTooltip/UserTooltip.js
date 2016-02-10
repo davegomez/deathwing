@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import css from './_userCard.scss';
+import css from './UserTooltip.scss';
 
 export default class UserCard extends React.Component {
   static propTypes = {
@@ -13,7 +13,7 @@ export default class UserCard extends React.Component {
 
   render() {
     return (
-      <div className={css.card}>
+      <div className={css.tooltip}>
         <p className={css.userName}>{this.props.userName}</p>
         <p className={css.userEmail}>{this.props.userEmail}</p>
       </div>

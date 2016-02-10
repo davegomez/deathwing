@@ -1,4 +1,4 @@
-.card {
+.tooltip {
   background: #455A64;
   border-radius: 4px;
   top: 0;
@@ -34,12 +34,12 @@
     width: 0;
   }
 }
-
-.avatar:hover .card {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0px);
-}
+//
+//.avatar:hover .tooltip {
+//  opacity: 1;
+//  pointer-events: auto;
+//  transform: translateY(0px);
+//}
 
 .userName {
   font-size: 14px;
