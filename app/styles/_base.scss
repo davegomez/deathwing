@@ -2,8 +2,13 @@
 
 html {
   box-sizing: border-box;
+  color: $clr-red;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+img {
+  margin: 200px;
 }

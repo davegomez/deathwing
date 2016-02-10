@@ -1,8 +1,10 @@
-.tooltip {
-  background: #455A64;
+@import '../../styles/_material-color';
+
+:global .tooltip {
+  background: $clr-blue-grey-700;
   border-radius: 4px;
   top: 0;
-  color: #ffffff;
+  color: $clr-white;
   display: block;
   left: calc(100% + 16px);
   opacity: 0;
@@ -25,7 +27,7 @@
   &:after {
     border-top: solid transparent 10px;
     border-bottom: solid transparent 10px;
-    border-right: solid #455A64 10px;
+    border-right: solid $clr-blue-grey-700 10px;
     content: " ";
     height: 0;
     left: -10px;
@@ -34,12 +36,12 @@
     width: 0;
   }
 }
-//
-//.avatar:hover .tooltip {
-//  opacity: 1;
-//  pointer-events: auto;
-//  transform: translateY(0px);
-//}
+
+:global .avatar:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
 
 .userName {
   font-size: 14px;
@@ -48,6 +50,6 @@
 .userEmail {
   font-size: 12px;
   font-style: italic;
-  font-weigth: 300;
+  font-weight: 300;
 
 }

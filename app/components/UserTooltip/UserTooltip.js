@@ -13,7 +13,7 @@ export default class UserCard extends React.Component {
 
   render() {
     return (
-      <div className={css.tooltip}>
+      <div className="tooltip">
         <p className={css.userName}>{this.props.userName}</p>
         <p className={css.userEmail}>{this.props.userEmail}</p>
       </div>
