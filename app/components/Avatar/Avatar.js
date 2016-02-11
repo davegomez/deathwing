@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { UserTooltip } from '../';
+import './Avatar.scss';
 
 export default class Avatar extends React.Component {
   static propTypes = {
