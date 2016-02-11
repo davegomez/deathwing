@@ -15,16 +15,16 @@ $font-weight--medium   : 500;
 
 // Text
 
-$font-size--button     : 14px; // ALL CAPS
-$font-size--caption    : 12px;
-$font-size--body       : 13px;
-$font-size--subheading : 15px;
-$font-size--title      : 20px;
-$font-size--healine    : 24px;
-$font-size--display-1  : 34px;
-$font-size--display-2  : 45px;
+$font-size--display-4  : 112px; // LIGHT
 $font-size--display-3  : 56px;
-$font-size--display-4  : 112px;
+$font-size--display-2  : 45px;
+$font-size--display-1  : 34px;
+$font-size--headline   : 24px;
+$font-size--title      : 20px; // MEDIUM
+$font-size--subheading : 15px;
+$font-size--body       : 13px; // BODY 2 MEDIUM
+$font-size--caption    : 12px;
+$font-size--button     : 14px; // ALL CAPS | MEDIUM
 
 $base__font-size       : $font-size--body;
 $base__line            : 19.5px;
