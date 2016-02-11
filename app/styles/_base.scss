@@ -21,6 +21,19 @@ body {
   line-height: ($base__line/$base__font-size);
 }
 
+h1 {
+  font-size: em($font-size--headline);
+}
+
+h2 {
+  font-size: em($font-size--title);
+  font-weight: $font-weight--medium;
+}
+
+h3 {
+  font-size: em($font-size--subheading);
+}
+
 p {
   font-size: em($font-size--body);
   margin: 0 0 em(6px, $font-size--body);
