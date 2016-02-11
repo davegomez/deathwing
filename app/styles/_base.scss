@@ -1,14 +1,27 @@
-@import './_material-color';
+
+// Box Sizing Hack
 
 html {
   box-sizing: border-box;
-  color: $clr-red;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-img {
-  margin: 200px;
+
+
+// ======================= //
+//   BASIC GLOBAL STYLES
+// ======================= //
+
+body {
+  font-family: $font-family--primary;
+  font-size: $font-size--body;
+  line-height: ($base__line/$base__font-size);
+}
+
+p {
+  font-size: em($font-size--body);
+  margin: 0 0 em(6px, $font-size--body);
 }
