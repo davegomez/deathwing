@@ -11,9 +11,9 @@ html {
 
 
 
-// ======================= //
-//   BASIC GLOBAL STYLES
-// ======================= //
+// ============================== //
+//      Basic Global Styles
+// ============================== //
 
 body {
   font-family: $font-family--primary;
@@ -37,4 +37,14 @@ h3 {
 p {
   font-size: em($font-size--body);
   margin: 0 0 em(6px, $font-size--body);
+}
+
+
+
+// ============================== //
+//         Custom Styles
+// ============================== //
+
+:global .intent {
+  @include bg-colors($intent-colors);
 }
