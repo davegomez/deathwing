@@ -1,4 +1,6 @@
-@import '../../styles/_material-color';
+@import '../../styles/material-color';
+@import '../../styles/fonts';
+@import '../../styles/utilities';
 
 :global .tooltip {
   background: $clr-blue-grey-700;
@@ -8,7 +10,7 @@
   display: block;
   left: calc(100% + 16px);
   opacity: 0;
-  padding: 10px;
+  padding: em(8px) em(10px);
   pointer-events: none;
   position: absolute;
   transform: translateX(-10px);
@@ -35,6 +37,10 @@
     top: calc(50% - 10px);
     width: 0;
   }
+
+  p {
+    margin-bottom: em(2px, $font-size--body);
+  }
 }
 
 :global .avatar:hover .tooltip {
@@ -43,13 +49,9 @@
   transform: translateY(0px);
 }
 
-.userName {
-  font-size: 14px;
-}
-
 .userEmail {
-  font-size: 12px;
+  font-size: em($font-size--caption);
   font-style: italic;
-  font-weight: 300;
+  font-weight: $font-weight--light;
 
 }
