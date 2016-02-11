@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import { UserTooltip } from '../';
-import css from './Avatar.scss';
 
 export default class Avatar extends React.Component {
   static propTypes = {
@@ -15,13 +14,15 @@ export default class Avatar extends React.Component {
 
   render() {
     return (
-      <div className="avatar">
+      <div className={'avatar'}>
         <img
           src={this.props.userImageURL}
-          alt={this.props.userName} />
+          alt={this.props.userName}
+        />
         <UserTooltip
           userName={this.props.userName}
-          userEmail={this.props.userEmail} />
+          userEmail={this.props.userEmail}
+        />
       </div>
     );
   }

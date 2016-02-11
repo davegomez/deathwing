@@ -1,0 +1,30 @@
+// ============================== //
+//   Global Font Configuration
+// ============================== //
+
+// Font Stacks
+
+$font-url--google      : 'https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic';
+$font-family--primary  : 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--light    : 300;
+$font-weight--regular  : 400;
+$font-weight--medium   : 500;
+
+// Text
+
+$font-size--button     : 14px; // ALL CAPS
+$font-size--caption    : 12px;
+$font-size--body       : 13px;
+$font-size--subheading : 15px;
+$font-size--title      : 20px;
+$font-size--healine    : 24px;
+$font-size--display-1  : 34px;
+$font-size--display-2  : 45px;
+$font-size--display-3  : 56px;
+$font-size--display-4  : 112px;
+
+$base__font-size       : $font-size--body;
+$base__line            : 19.5px;
