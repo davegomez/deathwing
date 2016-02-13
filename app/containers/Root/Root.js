@@ -6,6 +6,14 @@ import { connect } from 'react-redux';
 import { Avatar } from '../../components';
 import { } from '../../actions/action-creators';
 
+// TODO: Make this better! obviously...
+const LoginPanel = (props) =>
+  <div style={{ marginTop: '40px' }}>
+    <button onClick={props.login}>Login</button>
+    <button onClick={props.logout}>Logout</button>
+    {props.message}
+  </div>;
+
 class Root extends React.Component {
   constructor(props) {
     super(props);
@@ -56,17 +64,15 @@ class Root extends React.Component {
     return (
       <div>
         <Avatar
-          userImageURL={'/assets/dog.jpg'}
+          userImageURL={'/assets/default-avatars/avatar_6.jpg'}
           userName={'David Gómez'}
           userEmail={'dgomez@hugeinc.com'}
         />
-        <button onClick={this.login}>
-          Login
-        </button>
-        <button onClick={this.logout}>
-          Logout
-        </button>
-        {loggedMessage}
+        <LoginPanel
+          login={this.login}
+          logout={this.logout}
+          message={loggedMessage}
+        />
       </div>
     );
   }
