@@ -1,10 +1,9 @@
-/* global Auth0Lock */
-
-import React from 'react';
+/* global Auth0Lock, Firebase */
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-// import { LoginForm } from '../../components';
 import { Avatar } from '../../components';
-import { } from '../../actions/action-creators';
+import { bindActionCreators } from 'redux';
+import { setTokenId } from '../../actions/actionCreators';
 
 // TODO: Make this better! obviously...
 const LoginPanel = (props) =>
@@ -14,35 +13,48 @@ const LoginPanel = (props) =>
     {props.message}
   </div>;
 
+LoginPanel.propTypes = {
+  login: PropTypes.func,
+  logout: PropTypes.func,
+  message: PropTypes.string
+};
+
+const cleanUrlHash = () => history.pushState('', document.title, window.location.pathname);
+
+const getIdToken = authHash => {
+  let tokenId = localStorage.getItem('userToken');
+
+  if (!tokenId && authHash) {
+    if (authHash.id_token) {
+      tokenId = authHash.id_token;
+      localStorage.setItem('userToken', authHash.id_token);
+      cleanUrlHash();
+    }
+    if (authHash.error) {
+      console.log('Error signing in', authHash);
+      return null;
+    }
+  }
+
+  return tokenId;
+};
+
 class Root extends React.Component {
   constructor(props) {
     super(props);
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
+
+    const myDataRef = new Firebase('https://deathwing.firebaseio-demo.com/');
+
+    console.log(myDataRef);
   }
 
   componentWillMount() {
     this.lock = new Auth0Lock('YiIxyJNx5h6R01tOQ3zGiTLAXMwu9oLq', 'deathwing.auth0.com');
-    this.setState({ idToken: this.getIdToken() }); // Get the token
-  }
-
-  getIdToken() {
-    let idToken = localStorage.getItem('userToken');
     const authHash = this.lock.parseHash(window.location.hash);
 
-    if (!idToken && authHash) {
-      if (authHash.id_token) {
-        idToken = authHash.id_token;
-        localStorage.setItem('userToken', authHash.id_token);
-      }
-      if (authHash.error) {
-        console.log("Error signing in", authHash);
-        return null;
-      }
-    }
-
-    console.log(idToken);
-    return idToken;
+    this.props.actions.setTokenId(getIdToken(authHash));
   }
 
   login() {
@@ -58,7 +70,7 @@ class Root extends React.Component {
   }
 
   render() {
-    const loggedMessage = this.state.idToken &&
+    const loggedMessage = this.props.tokenId &&
       <div>UUUUjujujujuju Logged in!!!!!!!!!</div>;
 
     return (
@@ -79,14 +91,22 @@ class Root extends React.Component {
 }
 
 Root.propTypes = {
-
+  tokenId: PropTypes.oneOfType([
+    PropTypes.boolean,
+    PropTypes.string
+  ]),
+  actions: PropTypes.objectOf({
+    setTokenId: PropTypes.func
+  })
 };
 
 export default connect(
-  () => ({
-
+  state => ({
+    tokenId: state.loggedUser.tokenId
   }),
-  () => ({
-
+  dispatch => ({
+    actions: bindActionCreators({
+      setTokenId
+    }, dispatch)
   })
 )(Root);

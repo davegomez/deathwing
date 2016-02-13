@@ -1,4 +1,5 @@
 import createReducer from '../../app/utils/create-reducer';
+import expect from 'expect';
 
 const FOO = 'FOO';
 const BAR = 'BAR';
