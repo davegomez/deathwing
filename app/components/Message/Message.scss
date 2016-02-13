@@ -1,0 +1,9 @@
+@import '../../styles/material-color';
+@import '../../styles/fonts';
+@import '../../styles/utilities';
+
+.message {
+  align-items: flex-start;
+  display: flex;
+  width: 300px;
+}
