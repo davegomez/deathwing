@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { UserTooltip } from '../';
+import { UserTooltip, Counter } from '../';
 import './Avatar.scss';
 
 export default class Avatar extends React.Component {
@@ -16,10 +16,11 @@ export default class Avatar extends React.Component {
   render() {
     return (
       <div className={'avatar'}>
-        <img
+        <img className={'user-image'}
           src={this.props.userImageURL}
           alt={this.props.userName}
         />
+        <Counter count={0} />
         <UserTooltip
           userName={this.props.userName}
           userEmail={this.props.userEmail}
