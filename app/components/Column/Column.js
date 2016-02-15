@@ -5,7 +5,7 @@ const Column = ({ children }) =>
   <div className="col-sm-4"> {children} </div>;
 
 Column.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.node
 };
 
 export default Column;
