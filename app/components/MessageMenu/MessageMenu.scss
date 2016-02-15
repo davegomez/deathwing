@@ -5,7 +5,7 @@
 :global .menu {
   align-items: center;
   background-color: $clr-white;
-  border-radius: em(2px);
+  border-radius: em(2px) em(2px) 0 0;
   display: flex;
   justify-content: space-between;
   opacity: 0;
