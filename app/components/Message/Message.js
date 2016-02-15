@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Avatar } from '../';
+import { Avatar, MessageText, MessageInput } from '../';
 import css from './Message.scss';
 
 export default class Message extends React.Component {
@@ -18,7 +18,7 @@ export default class Message extends React.Component {
     return (
       <section className={css.message}>
         <div className={css.messageText}>
-          <p>{this.props.message}</p>
+          <MessageInput message={this.props.message} />
         </div>
         <div className={css.messageAvatar}>
           <Avatar
