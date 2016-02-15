@@ -1,7 +1,7 @@
 /* global Auth0Lock, Firebase */
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Message } from '../../components';
+import { Message, Row, Column } from '../../components';
 import { bindActionCreators } from 'redux';
 import { setTokenId } from '../../actions/actionCreators';
 
@@ -101,6 +101,29 @@ class Root extends React.Component {
           logout={this.logout}
           message={loggedMessage}
         />
+        <Row>
+          <Column>
+            <h1>START</h1>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+          </Column>
+          <Column>
+            <h1>STOP</h1>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+          </Column>
+          <Column>
+            <h1>CONTINUE</h1>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+          </Column>
+        </Row>
       </div>
     );
   }

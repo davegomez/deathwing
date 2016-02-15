@@ -101,12 +101,12 @@ $bps: (
  */
 
 @mixin grid-base( $namespace ) {
-  .col-#{$namespace} {
+  :global .col-#{$namespace} {
     @extend %col-flex;
   }
 
   @for $i from 1 through $columns {
-    .col-#{$namespace}-#{$i} {
+    :global .col-#{$namespace}-#{$i} {
       @extend %col;
     }
   }
