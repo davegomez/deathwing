@@ -4,6 +4,7 @@ import css from './Icon.scss';
 const PREFIX = '/assets/icons/';
 
 const icons = {
+  edit: `${PREFIX}edit.svg`,
   export: `${PREFIX}export.svg`,
   navicon: `${PREFIX}navicon.svg`,
   plusBig: `${PREFIX}plus-big.svg`,
