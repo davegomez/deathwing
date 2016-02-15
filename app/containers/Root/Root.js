@@ -1,7 +1,7 @@
 /* global Auth0Lock, Firebase */
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Message } from '../../components';
+import { Message, Title, Row, Column } from '../../components';
 import { bindActionCreators } from 'redux';
 import { setTokenId } from '../../actions/actionCreators';
 
@@ -16,7 +16,10 @@ const LoginPanel = (props) =>
 LoginPanel.propTypes = {
   login: PropTypes.func,
   logout: PropTypes.func,
-  message: PropTypes.string
+  message: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.boolean
+  ])
 };
 
 const cleanUrlHash = () => history.pushState('', document.title, window.location.pathname);
@@ -101,6 +104,29 @@ class Root extends React.Component {
           logout={this.logout}
           message={loggedMessage}
         />
+        <Row>
+          <Column>
+            <Title>START</Title>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+          </Column>
+          <Column>
+            <Title>STOP</Title>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+          </Column>
+          <Column>
+            <Title>CONTINUE</Title>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+            <p>Hola mundo genial???</p>
+          </Column>
+        </Row>
       </div>
     );
   }

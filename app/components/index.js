@@ -7,3 +7,6 @@ export { default as Icon } from './Icon/Icon';
 export { default as Counter } from './Counter/Counter';
 export { default as Avatar } from './Avatar/Avatar';
 export { default as UserTooltip } from './UserTooltip/UserTooltip';
+export { default as Row } from './Row/Row';
+export { default as Column } from './Column/Column';
+export { default as Title } from './Title/Title';
