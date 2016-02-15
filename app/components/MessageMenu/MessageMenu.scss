@@ -1,0 +1,35 @@
+@import '../../styles/material-color';
+@import '../../styles/fonts';
+@import '../../styles/utilities';
+
+:global .menu {
+  align-items: center;
+  background-color: $clr-white;
+  border-radius: em(2px);
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  padding: em(4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .25s ease-out;
+  width: 36px;
+}
+
+:global .message:hover .menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-100%);
+}
+
+.button {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}
