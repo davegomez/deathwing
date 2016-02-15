@@ -21,24 +21,6 @@ LoginPanel.propTypes = {
 
 const cleanUrlHash = () => history.pushState('', document.title, window.location.pathname);
 
-const getIdToken = authHash => {
-  let tokenId = localStorage.getItem('userToken');
-
-  if (!tokenId && authHash) {
-    if (authHash.id_token) {
-      tokenId = authHash.id_token;
-      localStorage.setItem('userToken', authHash.id_token);
-      cleanUrlHash();
-    }
-    if (authHash.error) {
-      console.log('Error signing in', authHash);
-      return null;
-    }
-  }
-
-  return tokenId;
-};
-
 class Root extends React.Component {
   constructor(props) {
     super(props);
@@ -51,10 +33,43 @@ class Root extends React.Component {
   }
 
   componentWillMount() {
-    this.lock = new Auth0Lock('YiIxyJNx5h6R01tOQ3zGiTLAXMwu9oLq', 'deathwing.auth0.com');
-    const authHash = this.lock.parseHash(window.location.hash);
+    const auth0ClientId = 'YiIxyJNx5h6R01tOQ3zGiTLAXMwu9oLq';
 
-    this.props.actions.setTokenId(getIdToken(authHash));
+    this.lock = new Auth0Lock(auth0ClientId, 'deathwing.auth0.com');
+
+    const authHash = this.lock.parseHash(window.location.hash);
+    let tokenId = localStorage.getItem('userToken');
+
+    if (!tokenId && authHash) {
+      this.lock.getProfile(authHash.id_token, (err, profile) => {
+        if (err) throw err;
+
+        profile.access_token = authHash.access_token;
+
+        this.lock.getClient().getDelegationToken({
+          target: auth0ClientId,
+          id_token: authHash.id_token,
+          api_type: 'firebase'
+        }, (err, delegationResult) => {
+          profile.firebase_token = delegationResult.id_token;
+          localStorage.setItem('firebase_profile', profile);
+          console.log('profile?', profile); // TODO: create action to store the profile???
+          //cleanUrlHash();
+
+          const ref = new Firebase('https://deathwing.firebaseio.com');
+
+          ref.authWithCustomToken(profile.firebase_token, (error, authData) => {
+            if (error) {
+              console.log('Login Failed!', error);
+            } else {
+              console.log('Login Succeeded!', authData);
+            }
+          });
+        });
+      });
+    }
+
+    this.props.actions.setTokenId(tokenId);
   }
 
   login() {
