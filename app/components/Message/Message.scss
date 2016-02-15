@@ -2,9 +2,10 @@
 @import '../../styles/fonts';
 @import '../../styles/utilities';
 
-.message {
+:global .message {
   align-items: flex-start;
   display: flex;
+  position: relative;
   width: 300px;
 }
 
