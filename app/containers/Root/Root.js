@@ -1,7 +1,7 @@
 /* global Auth0Lock, Firebase */
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Avatar } from '../../components';
+import { Message } from '../../components';
 import { bindActionCreators } from 'redux';
 import { setTokenId } from '../../actions/actionCreators';
 
@@ -90,7 +90,8 @@ class Root extends React.Component {
 
     return (
       <div>
-        <Avatar
+        <Message
+          message="This is a test message for the retrospective tool, Hello World!"
           userImageURL={'/assets/default-avatars/avatar_6.jpg'}
           userName={'David Gómez'}
           userEmail={'dgomez@hugeinc.com'}
