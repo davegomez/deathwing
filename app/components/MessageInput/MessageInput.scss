@@ -1,0 +1,16 @@
+@import '../../styles/material-color';
+@import '../../styles/fonts';
+@import '../../styles/utilities';
+
+.input {
+  height: 40px;
+  border: 0;
+  border-bottom: em(1px) solid $clr-blue-grey-900;
+  line-height: (54px / $font-size--body);
+  padding-left: em(6px);
+  width: 100%;
+
+  &:focus {
+    outline: 0;
+  }
+}
