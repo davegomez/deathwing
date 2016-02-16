@@ -104,29 +104,31 @@ class Root extends React.Component {
           logout={this.logout}
           message={loggedMessage}
         />
-        <Row>
-          <Column>
-            <Title>START</Title>
-            <p>Hola mundo genial???</p>
-            <p>Hola mundo genial???</p>
-            <p>Hola mundo genial???</p>
-            <p>Hola mundo genial???</p>
-          </Column>
-          <Column>
-            <Title>STOP</Title>
-            <p>Hola mundo genial???</p>
-            <p>Hola mundo genial???</p>
-            <p>Hola mundo genial???</p>
-            <p>Hola mundo genial???</p>
-          </Column>
-          <Column>
-            <Title>CONTINUE</Title>
-            <p>Hola mundo genial???</p>
-            <p>Hola mundo genial???</p>
-            <p>Hola mundo genial???</p>
-            <p>Hola mundo genial???</p>
-          </Column>
-        </Row>
+        <div className="container">
+          <Row>
+            <Column>
+              <Title className="intent--start">START</Title>
+              <p>Hola mundo genial???</p>
+              <p>Hola mundo genial???</p>
+              <p>Hola mundo genial???</p>
+              <p>Hola mundo genial???</p>
+            </Column>
+            <Column>
+              <Title className="intent--stop">STOP</Title>
+              <p>Hola mundo genial???</p>
+              <p>Hola mundo genial???</p>
+              <p>Hola mundo genial???</p>
+              <p>Hola mundo genial???</p>
+            </Column>
+            <Column>
+              <Title className="intent--continue">CONTINUE</Title>
+              <p>Hola mundo genial???</p>
+              <p>Hola mundo genial???</p>
+              <p>Hola mundo genial???</p>
+              <p>Hola mundo genial???</p>
+            </Column>
+          </Row>
+        </div>
       </div>
     );
   }

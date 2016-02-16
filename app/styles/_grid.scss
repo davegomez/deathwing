@@ -63,6 +63,12 @@ $bps: (
   }
 }
 
+:global .container {
+  max-width: 940px;
+  padding: 0 $gutter;
+  margin: 0 auto;
+}
+
 /**
  * Row wrapper class, flex box parent.
  */
