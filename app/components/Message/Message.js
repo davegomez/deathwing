@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { Avatar, MessageText, MessageInput, MessageMenu } from '../';
 import css from './Message.scss';
 
-export default class Message extends React.Component {
+class Message extends React.Component {
   static propTypes = {
     message: PropTypes.string.isRequired,
     userImageURL: PropTypes.string.isRequired,
@@ -32,3 +32,5 @@ export default class Message extends React.Component {
     );
   }
 }
+
+export default Message;

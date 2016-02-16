@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { UserTooltip, Counter } from '../';
 import './Avatar.scss';
 
-export default class Avatar extends React.Component {
+class Avatar extends React.Component {
   static propTypes = {
     userImageURL: PropTypes.string.isRequired,
     userName: PropTypes.string.isRequired,
@@ -29,3 +29,5 @@ export default class Avatar extends React.Component {
     );
   }
 }
+
+export default Avatar;

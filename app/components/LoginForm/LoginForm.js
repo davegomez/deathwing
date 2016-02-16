@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './LoginForm.scss';
 
-export default class LoginForm extends React.Component {
+class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleLogin = this.handleLogin.bind(this);
@@ -51,3 +51,5 @@ export default class LoginForm extends React.Component {
     );
   }
 }
+
+export default LoginForm;

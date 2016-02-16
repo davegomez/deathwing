@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from '../';
 import css from './MessageMenu.scss';
 
-export default class MessageMenu extends React.Component {
+class MessageMenu extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -20,3 +20,5 @@ export default class MessageMenu extends React.Component {
     );
   }
 }
+
+export default MessageMenu;

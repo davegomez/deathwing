@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { Icon } from '../';
 import css from './Counter.scss';
 
-export default class Counter extends React.Component {
+class Counter extends React.Component {
   static propTypes = {
     count: PropTypes.number.isRequired
   };
@@ -25,3 +25,5 @@ export default class Counter extends React.Component {
     );
   }
 }
+
+export default Counter;

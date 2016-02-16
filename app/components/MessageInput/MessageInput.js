@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import css from './MessageInput.scss';
 
-export default class MessageInput extends React.Component {
+class MessageInput extends React.Component {
   static propTypes = {
     message: PropTypes.string.isRequired
   };
@@ -27,3 +27,5 @@ export default class MessageInput extends React.Component {
     );
   }
 }
+
+export default MessageInput;

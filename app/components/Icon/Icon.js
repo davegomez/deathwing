@@ -16,7 +16,7 @@ const icons = {
   upload: `${PREFIX}upload.svg`
 };
 
-export default class Icon extends React.Component {
+class Icon extends React.Component {
   static propTypes = {
     iconName: PropTypes.string.isRequired
   };
@@ -31,3 +31,5 @@ export default class Icon extends React.Component {
     );
   }
 }
+
+export default Icon;
