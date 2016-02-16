@@ -5,7 +5,7 @@
 :global .tooltip {
   background: $clr-blue-grey-700;
   border-radius: 4px;
-  top: 0;
+  top: -25%;
   color: $clr-white;
   display: block;
   left: calc(100% + 16px);
@@ -27,9 +27,9 @@
   }
 
   &:after {
-    border-top: solid transparent 10px;
-    border-bottom: solid transparent 10px;
-    border-right: solid $clr-blue-grey-700 10px;
+    border-top: solid transparent em(10px);
+    border-bottom: solid transparent em(10px);
+    border-right: solid $clr-blue-grey-700 em(10px);
     content: " ";
     height: 0;
     left: -10px;

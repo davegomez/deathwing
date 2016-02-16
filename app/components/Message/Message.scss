@@ -5,11 +5,10 @@
 :global .message {
   align-items: flex-start;
   display: flex;
+  margin-bottom: em(10px);
   position: relative;
-  width: 300px;
 }
 
 .messageText {
   margin-right: em(10px);
-  width: 100%;
 }

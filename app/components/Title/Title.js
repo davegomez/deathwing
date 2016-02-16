@@ -3,12 +3,11 @@ import classnames from 'classnames';
 import css from './Title.scss';
 
 const Title = ({ children, className, ...otherProps }) =>
-  <h2
-    {...otherProps}
-    className={classnames(className, css.title)}
-  >
-    {children}
-  </h2>;
+  <div className={classnames(className, css.container)}>
+    <h2 {...otherProps} className={css.title}>
+      {children}
+    </h2>
+  </div>;
 
 Title.propTypes = {
   children: PropTypes.node,
