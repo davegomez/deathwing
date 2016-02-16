@@ -9,12 +9,12 @@
   display: flex;
   justify-content: space-between;
   opacity: 0;
-  padding: em(4px);
+  padding: em(6px) em(4px);
   position: absolute;
   top: 0;
   left: 0;
   transition: all .25s ease-out;
-  width: 36px;
+  width: em(48px);
 }
 
 :global .message:hover .menu {
@@ -26,6 +26,7 @@
 .button {
   background-color: transparent;
   border: 0;
+  height: em(15px);
   margin: 0;
   padding: 0;
 

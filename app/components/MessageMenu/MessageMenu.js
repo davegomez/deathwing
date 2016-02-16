@@ -14,7 +14,7 @@ export default class MessageMenu extends React.Component {
           <Icon iconName="edit" />
         </button>
         <button className={css.button}>
-          <Icon iconName="remove" />
+          <Icon iconName="removeBig" />
         </button>
       </div>
     );

@@ -10,6 +10,7 @@ const icons = {
   plusBig: `${PREFIX}plus-big.svg`,
   plusSmall: `${PREFIX}plus-small.svg`,
   remove: `${PREFIX}remove.svg`,
+  removeBig: `${PREFIX}remove-big.svg`,
   share: `${PREFIX}share.svg`,
   signOut: `${PREFIX}sign-out.svg`,
   upload: `${PREFIX}upload.svg`
