@@ -1,7 +1,7 @@
 /* global Auth0Lock, Firebase */
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Message, Title, Row, Column } from '../../components';
+import { Message, Title, Row, Column, NavigationMenu } from '../../components';
 import { bindActionCreators } from 'redux';
 import { setTokenId } from '../../actions/actionCreators';
 
@@ -104,6 +104,7 @@ class Root extends React.Component {
           logout={this.logout}
           message={loggedMessage}
         />
+        <NavigationMenu />
         <div className="container">
           <Row>
             <Column>

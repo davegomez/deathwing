@@ -10,3 +10,4 @@ export { default as UserTooltip } from './UserTooltip/UserTooltip';
 export { default as Row } from './Row/Row';
 export { default as Column } from './Column/Column';
 export { default as Title } from './Title/Title';
+export { default as NavigationMenu } from './NavigationMenu/NavigationMenu';

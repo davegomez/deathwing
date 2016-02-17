@@ -1,0 +1,62 @@
+@import '../../styles/material-color';
+@import '../../styles/fonts';
+@import '../../styles/utilities';
+
+$icon-offset: 8px;
+
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  border: 0;
+  border-radius: 50%;
+  background-color: $clr-blue-grey-50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  transition: background-color 0.2s ease-in-out, transform 0.3s ease-out, margin-bottom 0.3s;
+  outline: none;
+
+  &:hover {
+    background-color: $clr-blue-grey-100;
+  }
+
+  &:first-child {
+    z-index: 10;
+  }
+
+  // Collapses each icon in a stack one over another
+  // so the menu shows a cool "spread" effect.
+  @for $i from 2 through 8 {
+    &:nth-child(#{$i}) {
+      z-index: 10 - $i;
+      transform: translateY(calc((-100% * #{$i - 1}) - #{$icon-offset}));
+      margin-bottom: 0;
+    }
+
+    .container:hover &:nth-child(#{$i}) {
+      transform: translateY(0);
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.large {
+  composes: icon;
+  width: 30px;
+  height: 30px;
+}
+
+.small {
+  composes: icon;
+  width: 24px;
+  height: 24px;
+}
