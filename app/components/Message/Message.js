@@ -1,6 +1,11 @@
 import React, { PropTypes } from 'react';
-import { Avatar, MessageText, MessageInput, MessageMenu } from '../';
+import { Avatar, MessageInput, MessageMenu } from '../';
 import css from './Message.scss';
+
+const MessageText = ({ message }) =>
+  <p>
+    {message}
+  </p>;
 
 class Message extends React.Component {
   static propTypes = {
