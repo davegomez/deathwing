@@ -41,6 +41,9 @@
 ### Redux
 [Redux](https://github.com/reactjs/redux) is a predictable state container for JavaScript applications that helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as [live code editing combined with a time traveling debugger](https://github.com/gaearon/redux-devtools).
 
+### SASS
+[SASS](http://sass-lang.com/) is a mature and heavily use CSS preprocessor with lots of capabilities in terms of CSS construction, scalability, and management. Completely compatible with all versions of CSS, SASS allows the developer write with a familiar syntax if you use the latest version of the language and the SCSS file extension.
+
 ## Tools
 // TODO Description
 
@@ -58,7 +61,7 @@
 [Enzyme](https://github.com/airbnb/enzyme) is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output while using a intuitive and flexible API similar to jQuery's API for DOM manipulation and traversal.
 
 ### ESLint
-// TODO Description
+[ESLint](http://eslint.org/) is a powerful and pluggable open source JavaScript [linting][1] utility used to find problematic patterns or code that doesn't adhere to certain style guidelines in the project. You can take advantage of this tool by installing an extension in your prefered IDE or Editor. 
 
 ## Services
 // TODO Description
@@ -68,3 +71,5 @@
 
 ### Firebase
 // TODO Description
+
+[1]: https://en.wikipedia.org/wiki/Lint_(software)
