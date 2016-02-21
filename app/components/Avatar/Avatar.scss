@@ -1,15 +1,107 @@
-:global {
-  .avatar {
-    align-items: center;
-    display: flex;
+@import '../../styles/material-color';
+@import '../../styles/fonts';
+@import '../../styles/utilities';
+
+.avatar {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  .user-image {
+    border-radius: 50%;
     height: 40px;
-    justify-content: center;
-    position: relative;
     width: 40px;
-    .user-image {
-      border-radius: 50%;
-      height: 40px;
-      width: 40px;
-    }
+  }
+}
+
+.userImage {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.tooltip {
+  background: $clr-blue-grey-700;
+  border-radius: 4px;
+  top: -25%;
+  color: $clr-white;
+  display: block;
+  left: calc(100% + 16px);
+  opacity: 0;
+  padding: em(8px) em(10px);
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-10px);
+  transition: all .25s ease-out;
+
+  &:before {
+    bottom: 0;
+    content: " ";
+    display: block;
+    height: 100%;
+    left: -20px;
+    position: absolute;
+    width: 20px;
+  }
+
+  &:after {
+    border-top: solid transparent em(10px);
+    border-bottom: solid transparent em(10px);
+    border-right: solid $clr-blue-grey-700 em(10px);
+    content: " ";
+    height: 0;
+    left: -10px;
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 0;
+  }
+
+  p {
+    margin-bottom: em(2px, $font-size--body);
+  }
+}
+
+.avatar:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
+
+.userEmail {
+  font-size: em($font-size--caption);
+  font-style: italic;
+  font-weight: $font-weight--light;
+
+}
+
+.container {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: 1;
+}
+
+.counter {
+  align-items: center;
+  background-color: $clr-red;
+  border: 0;
+  border-radius: 50%;
+  color: $clr-white;
+  display: flex;
+  font-size: $font-size--caption;
+  height: 20px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+
+  &:focus {
+    outline: 0;
+  }
+
+  img {
+    margin: 0 auto;
   }
 }

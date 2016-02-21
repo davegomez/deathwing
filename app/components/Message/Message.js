@@ -26,6 +26,7 @@ class Message extends React.Component {
             userImageURL={this.props.userImageURL}
             userName={this.props.userName}
             userEmail={this.props.userEmail}
+            votes={0}
           />
         </div>
       </section>
