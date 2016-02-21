@@ -1,9 +1,11 @@
 import React, { PropTypes } from 'react';
 import { Icon } from './..';
+import classnames from 'classnames';
 import css from './NavigationMenu.scss';
 
 const NavigationItem = ({ iconName, type }) =>
   <button className={css[type]}>
+    <div className={classnames(css.tooltip, css[iconName])}></div>
     <Icon iconName={iconName} />
   </button>;
 
