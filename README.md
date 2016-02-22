@@ -4,7 +4,7 @@
 
 -- *[Deathwing the Destroyer](http://wowwiki.wikia.com/wiki/Deathwing)*
 
-**Deathwing** is a small project developed to be used as a living guide or reference on how to build a single web application over [React](https://facebook.github.io/react/) + [Redux](http://redux.js.org/) technologies, and is hosted as a [SAAS](https://en.wikipedia.org/wiki/Software_as_a_service) where any agile team can use the actual retrospective application tool for their projects.
+**Deathwing** is a small project developed to be used as a living guide or reference on how to build a single web application over [React](https://facebook.github.io/react/) + [Redux](http://redux.js.org/) technologies, and hosted as a [SAAS](https://en.wikipedia.org/wiki/Software_as_a_service) where any agile team can use the actual retrospective application tool for their own projects completely free.
 
 ## Architecture
 
@@ -51,7 +51,7 @@
 [Webpack](https://webpack.github.io/) is a module bundler that brings a lot of exiting features like [Code Splitting](http://webpack.github.io/docs/code-splitting.html) allowing you to load modules on demand, [Loaders](http://webpack.github.io/docs/loaders.html) for easy transformations and tool integration into your workflow, and integrates a powerful plugin system that allows you to customize webpack for your needs and distribute common plugins as open source.
 
 ### Babel
-// TODO Description
+Babel is a transpiler for JavaScript best known for its ability to turn ECMAScript 2015 into code that runs in your browser or on your server today, it has support for the latest version of JavaScript, JSX, and Flow through syntax transformers and the [React preset](http://babeljs.io/docs/plugins/preset-react/), and you can compose your own transformation pipeline using existing plugins or write your own.
 
 ### Mocha + Expect + Enzyme
 [Mocha](https://mochajs.org/) is the TDD framework that provides the base of the Deathwing's TDD workflow, allowing you to run asynchronous tests with a simple and easy to read reporting interface.
@@ -67,9 +67,9 @@
 // TODO Description
 
 ### Auth0
-// TODO Description
+[Auth0](https://auth0.com/) is an enterprise-grade platform for modern identity where you can easily and quickly connect your apps, choose identity providers, add users, set up rules, customize your login page and access analytics from your Auth0 dashboard.
 
 ### Firebase
-// TODO Description
+[Firebase](https://www.firebase.com/) powers the appplication's backend provinding its realtime features and storing all the users data while shares the authentication responsabilities with Auth0.
 
 [1]: https://en.wikipedia.org/wiki/Lint_(software)
