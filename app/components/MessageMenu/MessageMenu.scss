@@ -1,6 +1,6 @@
-@import '../../styles/material-color';
-@import '../../styles/fonts';
-@import '../../styles/utilities';
+@import "../../styles/material-color";
+@import "../../styles/fonts";
+@import "../../styles/utilities";
 
 :global .menu {
   align-items: center;
@@ -13,7 +13,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: all .25s ease-out;
+  transition: all 0.25s ease-out;
   width: em(48px);
 }
 

@@ -1,6 +1,6 @@
-@import '../../styles/material-color';
-@import '../../styles/fonts';
-@import '../../styles/utilities';
+@import "../../styles/material-color";
+@import "../../styles/fonts";
+@import "../../styles/utilities";
 
 $icon-offset: 8px;
 
@@ -30,13 +30,13 @@ $icon-offset: 8px;
     background-color: $clr-blue-grey-100;
 
     .tooltip {
-      &:before {
+      &::before {
         opacity: 1;
         pointer-events: auto;
         right: 40px;
       }
 
-      &:after {
+      &::after {
         opacity: 1;
         pointer-events: auto;
         right: 34px;
@@ -81,7 +81,7 @@ $icon-offset: 8px;
 }
 
 .tooltip {
-  &:before {
+  &::before {
     background: $clr-blue-grey-700;
     border-radius: 4px;
     color: $clr-white;
@@ -93,11 +93,11 @@ $icon-offset: 8px;
     position: absolute;
     right: 30px;
     top: 0;
-    transition: all .25s ease-out;
+    transition: all 0.25s ease-out;
     white-space: nowrap;
   }
 
-  &:after {
+  &::after {
     border-bottom: 6px solid transparent;
     border-left: 6px solid $clr-blue-grey-700;
     border-top: 6px solid transparent;
@@ -106,7 +106,7 @@ $icon-offset: 8px;
     position: absolute;
     right: 24px;
     top: 6px;
-    transition: all .25s ease-out;
+    transition: all 0.25s ease-out;
     width: 0;
   }
 }
@@ -125,11 +125,11 @@ $icon-actions: (
   .#{$action} {
     composes: tooltip;
 
-    &:before {
+    &::before {
       content: $content;
     }
 
-    &:after {
+    &::after {
       content: "";
     }
   }
