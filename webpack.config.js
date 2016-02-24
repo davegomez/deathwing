@@ -30,6 +30,10 @@ const common = {
         test: /\.js$/,
         loader: 'eslint',
         exclude: /node_modules/
+      },
+      { test: /\.(sass|scss)$/,
+        loader: 'stylelint',
+        exclude: /node_modules/
       }
     ],
     loaders: [
@@ -38,6 +42,9 @@ const common = {
         loader: 'json'
       }
     ]
+  },
+  stylelint: {
+    configFile: path.join(__dirname, './.stylelintrc')
   },
   postcss: () => [autoprefixer]
 };
