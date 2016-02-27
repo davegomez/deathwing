@@ -5,11 +5,11 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
-
-
 
 // ============================== //
 //      Basic Global Styles
@@ -37,8 +37,6 @@ p {
   font-size: em($font-size--body);
   margin: 0 0 em(6px, $font-size--body);
 }
-
-
 
 // ============================== //
 //         Custom Styles
