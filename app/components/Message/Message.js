@@ -1,6 +1,16 @@
 import React, { PropTypes } from 'react';
-import { Avatar, MessageInput, MessageMenu } from '../';
+import { Avatar, MessageMenu } from '../';
 import css from './Message.scss';
+
+const MessageInput = ({ message, finishEdit, checkEnter }) =>
+  <input
+    type="text"
+    name="message"
+    className={css.input}
+    defaultValue={message}
+    onBlur={finishEdit}
+    onKeyPress={checkEnter}
+  />;
 
 const MessageText = ({ message }) =>
   <p>
