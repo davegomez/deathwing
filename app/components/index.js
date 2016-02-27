@@ -1,10 +1,9 @@
+export { default as NavigationMenu } from './NavigationMenu/NavigationMenu';
+export { default as MessageMenu } from './MessageMenu/MessageMenu';
 export { default as LoginForm } from './LoginForm/LoginForm';
 export { default as Message } from './Message/Message';
-export { default as MessageInput } from './MessageInput/MessageInput';
-export { default as MessageMenu } from './MessageMenu/MessageMenu';
-export { default as Icon } from './Icon/Icon';
 export { default as Avatar } from './Avatar/Avatar';
-export { default as Row } from './Row/Row';
 export { default as Column } from './Column/Column';
-export { default as Title } from './Title/Title';
-export { default as NavigationMenu } from './NavigationMenu/NavigationMenu';
+export { default as Intent } from './Intent/Intent';
+export { default as Icon } from './Icon/Icon';
+export { default as Row } from './Row/Row';
