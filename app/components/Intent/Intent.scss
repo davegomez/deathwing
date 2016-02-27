@@ -1,0 +1,17 @@
+@import "../../styles/material-color";
+@import "../../styles/fonts";
+@import "../../styles/utilities";
+
+.container {
+  align-items: center;
+  color: $clr-white;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  margin-bottom: em(20px);
+  width: 100%;
+}
+
+.text {
+  font-weight: $font-weight--light;
+}
