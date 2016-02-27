@@ -1,7 +1,7 @@
 /* global Auth0Lock, Firebase */
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Message, Title, Row, Column, NavigationMenu } from '../../components';
+import { Message, Intent, Row, NavigationMenu } from '../../components';
 import { bindActionCreators } from 'redux';
 import { setTokenId } from '../../actions/actionCreators';
 
@@ -107,27 +107,24 @@ class Root extends React.Component {
         <NavigationMenu />
         <div className="container">
           <Row>
-            <Column>
-              <Title className="intent--start">START</Title>
+            <Intent className="intent--start" title="START">
               <p>Hola mundo genial???</p>
               <p>Hola mundo genial???</p>
               <p>Hola mundo genial???</p>
               <p>Hola mundo genial???</p>
-            </Column>
-            <Column>
-              <Title className="intent--stop">STOP</Title>
+            </Intent>
+            <Intent className="intent--stop" title="STOP">
               <p>Hola mundo genial???</p>
               <p>Hola mundo genial???</p>
               <p>Hola mundo genial???</p>
               <p>Hola mundo genial???</p>
-            </Column>
-            <Column>
-              <Title className="intent--continue">CONTINUE</Title>
+            </Intent>
+            <Intent className="intent--continue" title="CONTINUE">
               <p>Hola mundo genial???</p>
               <p>Hola mundo genial???</p>
               <p>Hola mundo genial???</p>
               <p>Hola mundo genial???</p>
-            </Column>
+            </Intent>
           </Row>
         </div>
       </div>
