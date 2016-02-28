@@ -8,4 +8,11 @@ describe('Action Creators', () => {
       tokenId: 'foo'
     });
   });
+
+  it('should test SET_TOKEN_ID action creator', () => {
+    expect(ac.setTokenId('foo')).toEqual({
+      type: ac.SET_TOKEN_ID,
+      tokenId: 'foo'
+    });
+  });
 });
