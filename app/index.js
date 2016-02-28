@@ -11,6 +11,8 @@ import Root from './containers/Root/Root';
 import reducers from './reducers/reducers';
 import { CLIENT_ID } from './config';
 
+import initialState from './model.json';
+
 const reduxRouterMiddleware = syncHistory(browserHistory);
 const reducer = combineReducers({
   ...reducers,
@@ -23,7 +25,7 @@ const createStoreWithMiddleware = applyMiddleware(
   createLogger()
 )(createStore);
 
-const store = createStoreWithMiddleware(reducer);
+const store = createStoreWithMiddleware(reducer, initialState);
 
 if (module.hot) {
   // Enable Webpack hot module replacement for reducers
