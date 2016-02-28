@@ -1,7 +1,7 @@
 import expect from 'expect';
 import project from '../../app/reducers/project';
 
-describe('Users reducer', () => {
+describe('Project reducer', () => {
   it('should return a initial state if state is not set', () => {
     expect(project(undefined, {})).toEqual({
       name: '',

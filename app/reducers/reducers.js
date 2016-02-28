@@ -1,9 +1,11 @@
 import loggedUser from './loggedUser';
-import users from './users';
 import project from './project';
+import retros from './retros';
+import users from './users';
 
 export default {
   loggedUser,
-  users,
-  project
+  project,
+  retros,
+  users
 };
