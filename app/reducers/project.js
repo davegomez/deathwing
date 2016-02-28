@@ -1,6 +1,9 @@
 import createReducer from '../utils/create-reducer';
 
-const initialState = [];
+const initialState = {
+  name: '',
+  slug: ''
+};
 
 export default createReducer({
 
