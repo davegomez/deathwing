@@ -29,6 +29,7 @@ class Root extends React.Component {
     super(props);
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
+    this.renderMessage = this.renderMessage.bind(this);
 
     const myDataRef = new Firebase('https://deathwing.firebaseio-demo.com/');
 
@@ -87,18 +88,33 @@ class Root extends React.Component {
     // After this, redirect that noob to your home
   }
 
+  renderMessage(item, key) {
+    const currentUser = this.props.users.find(user => user.user_id === item.author);
+
+    console.log('currentUser', currentUser);
+
+    return currentUser && (
+      <Message
+        key={key}
+        message={item.message}
+        userImageURL={currentUser.picture}
+        userName={currentUser.name}
+        userEmail={currentUser.email}
+      />
+    );
+  }
+
   render() {
     const loggedMessage = this.props.tokenId &&
       <div>UUUUjujujujuju Logged in!!!!!!!!!</div>;
+    const { project } = this.props;
+    const [retro] = this.props.retros;
 
     return (
       <div>
-        <Message
-          message="This is a test message for the retrospective tool, Hello World!"
-          userImageURL={'/assets/default-avatars/avatar_6.jpg'}
-          userName={'David Gómez'}
-          userEmail={'dgomez@hugeinc.com'}
-        />
+        <h1>Name: {project.name}</h1>
+        <h2>Slug: {project.slug}</h2>
+        <h4>Retro date: {retro.date}</h4>
         <LoginPanel
           login={this.login}
           logout={this.logout}
@@ -108,22 +124,13 @@ class Root extends React.Component {
         <div className="container">
           <Row>
             <Intent className="intent--start" title="START">
-              <p>Hola mundo genial???</p>
-              <p>Hola mundo genial???</p>
-              <p>Hola mundo genial???</p>
-              <p>Hola mundo genial???</p>
+              {retro.start.map(this.renderMessage)}
             </Intent>
             <Intent className="intent--stop" title="STOP">
-              <p>Hola mundo genial???</p>
-              <p>Hola mundo genial???</p>
-              <p>Hola mundo genial???</p>
-              <p>Hola mundo genial???</p>
+              {retro.stop.map(this.renderMessage)}
             </Intent>
             <Intent className="intent--continue" title="CONTINUE">
-              <p>Hola mundo genial???</p>
-              <p>Hola mundo genial???</p>
-              <p>Hola mundo genial???</p>
-              <p>Hola mundo genial???</p>
+              {retro.continue.map(this.renderMessage)}
             </Intent>
           </Row>
         </div>
@@ -137,14 +144,18 @@ Root.propTypes = {
     PropTypes.boolean,
     PropTypes.string
   ]),
+  project: PropTypes.object,
   actions: PropTypes.objectOf({
     setTokenId: PropTypes.func
   })
 };
 
 export default connect(
-  state => ({
-    tokenId: state.loggedUser.tokenId
+  ({ loggedUser, project, retros, users }) => ({
+    tokenId: loggedUser.tokenId,
+    project,
+    retros, // TODO: Add current retro to the reducer
+    users
   }),
   dispatch => ({
     actions: bindActionCreators({
