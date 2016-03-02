@@ -6,12 +6,20 @@ $icon-offset: 8px;
 
 .container {
   position: fixed;
-  top: 0;
-  right: 0;
-  padding: em(20px);
+  top: em(20px);
+  right: em(20px);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.innerContainer {
+  max-height: 30px;
+  z-index: 0;
+
+  &:hover {
+    max-height: none;
+  }
 }
 
 .icon {
@@ -21,7 +29,7 @@ $icon-offset: 8px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  margin-bottom: em(5px);
+  margin: 0 auto em(5px);
   position: relative;
   outline: none;
   transition: background-color 0.2s ease-in-out, transform 0.3s ease-out, margin-bottom 0.3s;
@@ -57,7 +65,7 @@ $icon-offset: 8px;
       margin-bottom: 0;
     }
 
-    .container:hover &:nth-child(#{$i}) {
+    .innerContainer:hover &:nth-child(#{$i}) {
       transform: translateY(0);
       margin-bottom: 5px;
     }

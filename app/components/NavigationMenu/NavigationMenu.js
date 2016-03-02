@@ -11,12 +11,14 @@ const NavigationItem = ({ iconName, type }) =>
 
 const NavigationMenu = props =>
   <div className={css.container}>
-    <NavigationItem iconName="navicon" type="large" />
-    <NavigationItem iconName="upload" type="small" />
-    <NavigationItem iconName="export" type="small" />
-    <NavigationItem iconName="share" type="small" />
-    <NavigationItem iconName="remove" type="small" />
-    <NavigationItem iconName="signOut" type="small" />
+    <div className={css.innerContainer}>
+      <NavigationItem iconName="navicon" type="large" />
+      <NavigationItem iconName="upload" type="small" />
+      <NavigationItem iconName="export" type="small" />
+      <NavigationItem iconName="share" type="small" />
+      <NavigationItem iconName="remove" type="small" />
+      <NavigationItem iconName="signOut" type="small" />
+    </div>
   </div>;
 
 NavigationMenu.propTypes = {
