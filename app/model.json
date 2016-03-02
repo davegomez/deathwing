@@ -11,30 +11,28 @@
           "author": "112902474311526861409",
           "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus vehicula dolor, et vulputate mi.",
           "votes": [
-            "112902474311526861409",
-            "112902474311526861434"
+            "107927931671554213651"
           ]
         },
         {
-          "author": "112902474311526861449",
+          "author": "107927931671554213651",
           "message": "Nam accumsan justo tortor, non accumsan ante rutrum vel.",
           "votes": []
         },
         {
-          "author": "112902474311526861434",
+          "author": "107927931671554213651",
           "message": "Mauris commodo neque ac magna sagittis pellentesque.",
           "votes": [
-            "112902474311526861434",
-            "112902474311526861467"
+            "112902474311526861409",
+            "117540972003190807529"
           ]
         },
         {
-          "author": "112902474311526861409",
+          "author": "117540972003190807529",
           "message": "Cras malesuada erat a ex dapibus, sit amet rhoncus ante rutrum. Vestibulum ultrices sapien nec sem gravida hendrerit.",
           "votes": [
-            "112902474311526861409",
-            "112902474311526861434",
-            "112902474311526861412"
+            "107927931671554213651",
+            "112902474311526861409"
           ]
         }
       ],
@@ -43,37 +41,35 @@
           "author": "112902474311526861409",
           "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus vehicula dolor, et vulputate mi.",
           "votes": [
-            "112902474311526861409",
-            "112902474311526861434"
+            "107927931671554213651"
           ]
         },
         {
-          "author": "112902474311526861467",
+          "author": "107927931671554213651",
           "message": "Nam accumsan justo tortor, non accumsan ante rutrum vel.",
           "votes": []
         }
       ],
       "continue": [
         {
-          "author": "112902474311526861434",
+          "author": "117540972003190807529",
           "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus vehicula dolor, et vulputate mi.",
           "votes": [
             "112902474311526861409",
-            "112902474311526861434"
+            "107927931671554213651"
           ]
         },
         {
-          "author": "112902474311526861449",
+          "author": "107927931671554213651",
           "message": "Nam accumsan justo tortor, non accumsan ante rutrum vel.",
           "votes": []
         },
         {
-          "author": "112902474311526861434",
+          "author": "117540972003190807529",
           "message": "Cras malesuada erat a ex dapibus, sit amet rhoncus ante rutrum. Vestibulum ultrices sapien nec sem gravida hendrerit.",
           "votes": [
             "112902474311526861409",
-            "112902474311526861434",
-            "112902474311526861412"
+            "107927931671554213651"
           ]
         }
       ]
@@ -87,22 +83,16 @@
       "user_id": "112902474311526861409"
     },
     {
-      "email": "acornssn@gmail.com",
+      "email": "dgomez@hugeinc.com",
       "name": "Camilo Orrego",
-      "picture": "https:\/\/lh3.googleusercontent.com\/-BaWmj102r4M\/AAAAAAAAAAI\/AAAAAAAADjQ\/7N4URLJe0uM\/photo.jpg",
-      "user_id": "112902474311526861434"
+      "picture": "https://lh4.googleusercontent.com/-0GG0s0asfY8/AAAAAAAAAAI/AAAAAAAAAGg/P7ARihq1p-s/photo.jpg",
+      "user_id": "107927931671554213651"
     },
     {
-      "email": "jnaranjo@gmail.com",
+      "email": "dgomez@helloelephant.com",
       "name": "Jose Naranjo",
-      "picture": "https:\/\/lh3.googleusercontent.com\/-BaWmj102r4M\/AAAAAAAAAAI\/AAAAAAAADjQ\/7N4URLJe0uM\/photo.jpg",
-      "user_id": "112902474311526861467"
-    },
-    {
-      "email": "jandrade@gmail.com",
-      "name": "David Andrade",
-      "picture": "https:\/\/lh3.googleusercontent.com\/-BaWmj102r4M\/AAAAAAAAAAI\/AAAAAAAADjQ\/7N4URLJe0uM\/photo.jpg",
-      "user_id": "112902474311526861412"
+      "picture": "https://lh5.googleusercontent.com/-VnvI-Ti0d8U/AAAAAAAAAAI/AAAAAAAAAA0/TS4uB8KMDtM/photo.jpg",
+      "user_id": "117540972003190807529"
     }
   ]
 }
