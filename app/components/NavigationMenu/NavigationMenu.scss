@@ -45,14 +45,14 @@ $icon-offset: 8px;
   }
 
   &:first-child {
-    z-index: 10;
+    z-index: 1;
   }
 
   // Collapses each icon in a stack one over another
   // so the menu shows a cool "spread" effect.
   @for $i from 2 through 8 {
     &:nth-child(#{$i}) {
-      z-index: 10 - $i;
+      z-index: 1 - $i;
       transform: translateY(calc((-100% * #{$i - 1}) - #{$icon-offset}));
       margin-bottom: 0;
     }
