@@ -67,6 +67,15 @@ class Root extends React.Component {
               console.log('Login Failed!', error);
             } else {
               console.log('Login Succeeded!', authData);
+              const usersRef = ref.child('users');
+              window.usersRef = usersRef;
+
+              usersRef.on('child_added', function(snap, prevChild) {
+                const data = snap.val();
+                const key = snap.key();
+
+                console.log(prevChild, key, data);
+              });
             }
           });
         });
